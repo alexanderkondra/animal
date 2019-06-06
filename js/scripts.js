@@ -2,7 +2,7 @@ $(document).ready(function() {
   var animal = prompt("Choose an animal");
 
  // animals calling out value with in variable
-  animals(animal); 
+  animals(animal);
 
 function animals(selection) {
   if (animal === "Elephant") {
@@ -12,25 +12,33 @@ function animals(selection) {
     $("#lionKingShow").hide();
     }
 
-  if (animal === "Lion") {
+    else if (animal === "Lion") {
     $("#lionKingShow").show();
     $("#eleShow").hide();
     $("#seaOtterShow").hide();
     $("#snowLeoShow").hide();
     }
 
-  if (animal === "Sea Otter") {
+    else if (animal === "Sea Otter") {
     $("#seaOtterShow").show();
     $("#eleShow").hide();
     $("#lionKingShow").hide();
     $("#snowLeoShow").hide();
     }
 
-  if (animal === "Snow Leopard") {
+   else if (animal === "Snow Leopard") {
     $("#snowLeoShow").show();
     $("#eleShow").hide();
     $("#seaOtterShow").hide();
     $("#lionKingShow").hide();
+    }
+
+    else {
+      (animal ==="")
+      $("#snowLeoShow").hide();
+      $("#eleShow").hide();
+      $("#seaOtterShow").hide();
+      $("#lionKingShow").hide();
     }
   }
 });
